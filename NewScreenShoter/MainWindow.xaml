@@ -1,0 +1,37 @@
+﻿<Window x:Class="NewScreenShoter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewScreenShoter"
+        mc:Ignorable="d"
+        Title="Screenshoter" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Height="75" Width="470" Icon="screen.ico">
+    <Window.Resources>
+        <Style TargetType="MenuItem">
+            <Setter Property="Height" Value="35"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" FontFamily="Bookman Old Style" >
+            <MenuItem x:Name="Screenshot" Header="Сделать скриншот">
+                <MenuItem Name="DedicatedScreenShot" Header="Скриншот области экрана" Click="DedicatedScreenShot_Click"/>
+                <MenuItem Name="AllScreenShot" Header="Скриншот всего экрана" Click="AllScreenShot_Click"/>
+            </MenuItem>
+            <MenuItem Header="Записать экран">
+                <MenuItem x:Name="VideoScreen" Header="Начать запись экрана" Click="VideoScreen_Click"/>
+                <MenuItem x:Name="VideoScreenStop" Header="Завершить запись экран" Click="VideoScreenStop_Click"/>
+                <MenuItem x:Name="DedicatedVideoScreen" Header="Запись части экрана" Click="DedicatedVideoScreen_Click"/>
+                <MenuItem x:Name="DedicatedVideoScreenStop" Header="Завершить запись части экрана" Click="DedicatedVideoScreenStop_Click"/>
+            </MenuItem>
+            <MenuItem Header="Режим сна">
+                <MenuItem/>
+            </MenuItem>
+            <MenuItem Header="Настройки">
+                <MenuItem/>
+            </MenuItem>
+            <MenuItem Header="Выйти">
+                <MenuItem/>
+            </MenuItem>
+        </Menu>
+    </DockPanel>
+</Window>
